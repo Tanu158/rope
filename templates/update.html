@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+  update
+{% endblock title %}
+{% block body  %}
+
+  
+
+ 
+      <div class="container">
+        <h2>your updated data</h2>
+        <form action="/update/{{data.sno}}" method="POST">
+            <div class="mb-3">
+              <label for="title" class="form-label">Todo Title</label>
+              <input type="text" class="form-control" id="title" aria-describedby="emailHelp" name="title" value="{{data.title}}">
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <label for="desc" class="form-label">Todo Description</label>
+              <input type="text" class="form-control" id="desc" name="desc" value="{{data.desc}}">
+            </div>
+            <!-- <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+            <!-- </div> --> 
+            <button type="submit" class="btn btn-primary">update</button>
+          </form>
+      </div>
+     
+  {% endblock  body %}
